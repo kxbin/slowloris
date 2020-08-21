@@ -49,7 +49,8 @@ optional arguments:
                         Time to sleep between each header sent.
 ```
 
-
+## 例如
+* `python slowloris.py example.com -p 8080 -m POST -uri /test -s 10000 -ua -v`
 
 
 ### SOCKS5 proxy support
