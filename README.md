@@ -16,6 +16,7 @@ This exhausts the servers thread pool and the server can't reply to other people
 * `python3 slowloris.py example.com`
 
 ## 参数列表：
+```
 usage: slowloris.py [-h] [-p PORT] [-m METHOD] [-uri URI] [-pl PAYLOAD] [-s SOCKETS] [-v] [-ua] [-x]
                     [--proxy-host PROXY_HOST] [--proxy-port PROXY_PORT] [--https] [--sleeptime SLEEPTIME]
                     [host]
@@ -46,6 +47,7 @@ optional arguments:
   --https               Use HTTPS for the requests
   --sleeptime SLEEPTIME
                         Time to sleep between each header sent.
+```
 
 
 
