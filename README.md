@@ -11,18 +11,44 @@ This exhausts the servers thread pool and the server can't reply to other people
 
 ## How to install and run?
 
-You can clone the git repo or install using **pip**. Here's how you run it.
-
-* `sudo pip3 install slowloris`
-* `slowloris example.com`
-
-That's all it takes to install and run slowloris.py.
-
-If you want to clone using git instead of pip, here's how you do it.
-
 * `git clone https://github.com/gkbrk/slowloris.git`
 * `cd slowloris`
 * `python3 slowloris.py example.com`
+
+## 参数列表：
+usage: slowloris.py [-h] [-p PORT] [-m METHOD] [-uri URI] [-pl PAYLOAD] [-s SOCKETS] [-v] [-ua] [-x]
+                    [--proxy-host PROXY_HOST] [--proxy-port PROXY_PORT] [--https] [--sleeptime SLEEPTIME]
+                    [host]
+
+Slowloris, low bandwidth stress test tool for websites
+
+positional arguments:
+  host                  Host to perform stress test on // 主机ip地址
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PORT, --port PORT  Port of webserver, usually 80 // 主机端口，默认80
+  -m METHOD, --method METHOD // 请求方法，默认GET
+                        HTTP method
+  -uri URI, --uri URI   HTTP uri // 请求路径，默认跟路径/
+  -pl PAYLOAD, --payload PAYLOAD // 请求体，默认随机数
+                        HTTP payload
+  -s SOCKETS, --sockets SOCKETS // 线程数，默认150，建议10000+
+                        Number of sockets to use in the test
+  -v, --verbose         Increases logging // 开启日志debug
+  -ua, --randuseragents // 开启随机user-agents
+                        Randomizes user-agents with each request
+  -x, --useproxy        Use a SOCKS5 proxy for connecting // 是否启用代理
+  --proxy-host PROXY_HOST
+                        SOCKS5 proxy host
+  --proxy-port PROXY_PORT
+                        SOCKS5 proxy port
+  --https               Use HTTPS for the requests
+  --sleeptime SLEEPTIME
+                        Time to sleep between each header sent.
+
+
+
 
 ### SOCKS5 proxy support
 
