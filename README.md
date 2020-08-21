@@ -13,7 +13,7 @@ This exhausts the servers thread pool and the server can't reply to other people
 
 * `git clone https://github.com/kxbin/slowloris.git`
 * `cd slowloris`
-* `python3 slowloris.py example.com`
+* `python slowloris.py example.com`
 
 ## 参数列表：
 ```
@@ -50,7 +50,10 @@ optional arguments:
 ```
 
 ## 例如
-* `python slowloris.py example.com -p 8080 -m POST -uri /test -s 10000 -ua -v`
+* `python slowloris.py example.com -p 80 -s 10000 -ua`
+
+
+
 
 
 
