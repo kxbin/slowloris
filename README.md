@@ -11,7 +11,7 @@ This exhausts the servers thread pool and the server can't reply to other people
 
 ## How to install and run?
 
-* `git clone https://github.com/gkbrk/slowloris.git`
+* `git clone https://github.com/kxbin/slowloris.git`
 * `cd slowloris`
 * `python3 slowloris.py example.com`
 
