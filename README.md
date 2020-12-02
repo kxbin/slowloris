@@ -15,6 +15,9 @@ This exhausts the servers thread pool and the server can't reply to other people
 * `cd slowloris`
 * `python slowloris.py example.com`
 
+## 例如
+* `python slowloris.py example.com -p 80 -s 10000 -ua`
+
 ## 参数列表：
 ```
 usage: slowloris.py [-h] [-p PORT] [-m METHOD] [-uri URI] [-pl PAYLOAD] [-s SOCKETS] [-v] [-ua] [-x]
@@ -28,35 +31,42 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -p PORT, --port PORT  Port of webserver, usually 80 // 主机端口，默认80
-  -m METHOD, --method METHOD // 请求方法，默认GET
+  
+  -p PORT, --port PORT  Port of webserver, usually 80
+                         // 主机端口，默认80
+                         
+  -m METHOD, --method METHOD
+                        // 请求方法，默认GET
                         HTTP method
-  -uri URI, --uri URI   HTTP uri // 请求路径，默认跟路径/
-  -pl PAYLOAD, --payload PAYLOAD // 请求体，默认随机数
+                        
+  -uri URI, --uri URI   HTTP uri
+                         // 请求路径，默认根路径'/'
+                         
+  -pl PAYLOAD, --payload PAYLOAD
+                        // 请求体，默认随机数
                         HTTP payload
+                        
   -s SOCKETS, --sockets SOCKETS // 线程数，默认150，建议10000+
                         Number of sockets to use in the test
+                        
   -v, --verbose         Increases logging // 开启日志debug
+  
   -ua, --randuseragents // 开启随机user-agents
                         Randomizes user-agents with each request
+                        
   -x, --useproxy        Use a SOCKS5 proxy for connecting // 是否启用代理
+  
   --proxy-host PROXY_HOST
                         SOCKS5 proxy host
+                        
   --proxy-port PROXY_PORT
                         SOCKS5 proxy port
+                        
   --https               Use HTTPS for the requests
+  
   --sleeptime SLEEPTIME
                         Time to sleep between each header sent.
 ```
-
-## 例如
-* `python slowloris.py example.com -p 80 -s 10000 -ua`
-
-
-
-
-
-
 
 ## SOCKS5 proxy support
 
